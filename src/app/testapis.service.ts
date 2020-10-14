@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import {baseURL} from '../shared/baseURL';
 @Injectable({
   providedIn: 'root'
 })
 export class TestapisService {
-
-  api1 = "https://jsonplaceholder.typicode.com/posts";
-  api2 = "https://jsonplaceholder.typicode.com/comments";
-  api3 = "https://jsonplaceholder.typicode.com/photos";
+  //`${baseURL}restaurant/api/v1/merchant/restaurants`
+  api1 = `${baseURL.url1}posts`;
+  api2 = `${baseURL.url2}products`;
+  api3 = `${baseURL.url3}employees`;
   constructor(private http:HttpClient) { }
 
   /*getPosts()
